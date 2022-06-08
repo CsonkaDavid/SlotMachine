@@ -1,0 +1,7 @@
+{
+  "SlotId" : "Dav",
+  "leftCircle" : [ 4, 1, 2, 6, 9, 8 ],
+  "rightCircle" : [ 1, 3, 7, 10, 6, 5 ],
+  "bottomCircle" : [ 5, 2, 10, 12, 11, 9 ],
+  "rotations" : 1
+}
