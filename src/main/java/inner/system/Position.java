@@ -1,4 +1,4 @@
-package inner;
+package inner.system;
 
 import java.util.Objects;
 

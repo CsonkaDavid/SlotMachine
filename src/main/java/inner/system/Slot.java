@@ -1,4 +1,4 @@
-package inner;
+package inner.system;
 
 import java.util.ArrayList;
 
@@ -10,4 +10,6 @@ public interface Slot
     void payout();
     void generateNewLayout();
     void generateSymbols();
+    void generateMultipliers();
+    void generateWinLines();
 }

@@ -1,4 +1,4 @@
-package inner;
+package inner.system;
 
 public class Player
 {

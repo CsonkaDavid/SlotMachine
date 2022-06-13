@@ -1,27 +1,25 @@
-package inner;
+package inner.system;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public abstract class SlotMachine implements Slot
 {
-    int id, columns, rows, bet, payout;
+    protected int id, columns, rows, bet, payout;
 
-    Player currentPlayer;
+    public Player currentPlayer;
 
-    Layout layout;
-    Layout newLayout;
-    WinLine[] winLines;
-    Symbol[] symbols;
+    protected Layout layout;
+    protected WinLine[] winLines;
+    protected Symbol[] symbols;
 
     public ArrayList<WinLine> roll() {
-        layout = newLayout;
         ArrayList<WinLine> lines = new ArrayList<>();
 
         for(var line : winLines) {
             Symbol winningSymbol = layout.getSymbol(line.getStartingPosition());
 
-            int matching = line.checkSymbols(winningSymbol, layout);
+            int matching = line.countMatches(winningSymbol, layout);
 
             if(matching >= winningSymbol.getWinQuantity()) {
                 payout += winningSymbol.getMultiplier(matching) * bet;

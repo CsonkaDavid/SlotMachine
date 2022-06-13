@@ -1,4 +1,4 @@
-package inner;
+package inner.system;
 
 public class WinLine
 {
@@ -10,7 +10,7 @@ public class WinLine
         size = winPositions.length;
     }
 
-    public int checkSymbols(Symbol symbol, Layout layout) {
+    public int countMatches(Symbol symbol, Layout layout) {
         int matching = 0;
 
         for(int i = 0; i < size; i++) {
@@ -18,6 +18,7 @@ public class WinLine
 
             if(layout.getSymbol(pos) == symbol)
                 matching++;
+            else break;
         }
 
         return matching;
